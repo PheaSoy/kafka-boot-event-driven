@@ -1,0 +1,7 @@
+server:
+  port: 8081
+spring:
+  cloud.stream.bindings:
+    login-out.destination: auth.login # Topic Name
+    login-out.content-type: application/json
+    #auth.login-in:.destination: auth.login # Topic Name

@@ -8,7 +8,7 @@ import org.springframework.messaging.SubscribableChannel;
 public interface LoginEventBinder {
 
     String LOGIN_OUT = "login-out";
-    String LOGIN_IN = "login-in";
+    String LOGIN_IN = "login-in-disabled";
 
     @Output(LOGIN_OUT)
     MessageChannel report();

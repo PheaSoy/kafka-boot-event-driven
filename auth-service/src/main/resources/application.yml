@@ -4,4 +4,5 @@ spring:
   cloud.stream.bindings:
     login-out.destination: auth.login # Topic Name
     login-out.content-type: application/json
+    login-in-disabled.destination: auth.login.disable
     #auth.login-in:.destination: auth.login # Topic Name

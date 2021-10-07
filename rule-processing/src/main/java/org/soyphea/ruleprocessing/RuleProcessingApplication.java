@@ -1,5 +1,6 @@
 package org.soyphea.ruleprocessing;
 
+import org.soyphea.ruleprocessing.processor.login.LoginEventBinder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;

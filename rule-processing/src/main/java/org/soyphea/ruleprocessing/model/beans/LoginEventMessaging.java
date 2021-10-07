@@ -1,4 +1,4 @@
-package org.soyphea.ruleprocessing;
+package org.soyphea.ruleprocessing.model.beans;
 
 import lombok.*;
 

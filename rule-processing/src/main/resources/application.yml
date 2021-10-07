@@ -3,3 +3,4 @@ server:
 spring:
   cloud.stream.bindings:
     login-in.destination: auth.login # Topic Name
+    login-out-disable.destination: auth.login.disable # Topic Name

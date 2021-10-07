@@ -25,8 +25,9 @@ public class RuleEntity {
     @LastModifiedDate
     Instant lastUpdatedDate;
     Status status;
-    private List<MechanicEntity> mechanicEntities;
+    private List<String> mechanicIds;
     Instant fromDateTime;
     Instant endDateTime;
+    RuleAction action;
 
 }

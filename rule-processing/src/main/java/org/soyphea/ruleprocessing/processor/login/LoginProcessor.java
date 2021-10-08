@@ -2,7 +2,9 @@ package org.soyphea.ruleprocessing.processor.login;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.soyphea.ruleprocessing.model.Status;
 import org.soyphea.ruleprocessing.model.beans.LoginEventMessaging;
+import org.soyphea.ruleprocessing.model.entity.Event;
 import org.soyphea.ruleprocessing.model.entity.LoginEventEntity;
 import org.soyphea.ruleprocessing.repository.LoginRepository;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -29,7 +31,8 @@ public class LoginProcessor {
                 .lastModifiedDate(Instant.now())
                 .username(loginReceived.getUsername())
                 .isSuccess(loginReceived.isLoginSuccess())
-                .operation(loginReceived.getOperation())
+                .event(Event.LOGIN)
+                .status(Status.ACTIVE)
                 .build();
         loginRepository.save(loginEventEntity).subscribe();
     }

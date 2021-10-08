@@ -27,4 +27,8 @@ public class MechanicEntity {
     Instant fromDateTime;
     Instant endDateTime;
     Status status;
+
+    String sortId() {
+        return this.getName() + this.getId().substring(0, 8);
+    }
 }
